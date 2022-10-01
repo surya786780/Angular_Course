@@ -1,0 +1,84 @@
+<form [formGroup]="form" (ngSubmit)="login()" >
+    <!-- nested form groups -->
+<div formGroupName="account">
+    <!-- Validation form input upon Submit -->
+    <div *ngIf="form.errors" class="alert alert-danger">
+        The username or password is incorrect
+    </div>
+
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input 
+
+            formControlName="username"
+            id="username" 
+            type="text" 
+            class="form-control">
+            
+            <!-- Showing a loader Imagej  -->
+            <!-- <div *ngIf="username.pending">Checking for uniqueness...</div> -->
+            <!-- ngIf inside username is type script class -->
+        <div 
+        *ngIf="username.touched && username.invalid" 
+            class="alert alert-danger">
+            <div *ngIf="username.errors.required">Username is required</div>
+            <div *ngIf="username.errors.minlength">Username minimum {{username.errors.minlength.requiredLength}} Characters required</div>
+            <div *ngIf="username.errors.cannotContainSpace">Username Can't contain space</div>
+            <div *ngIf="username.errors.shouldBeUnique">Username is already taken</div>
+       
+        </div> 
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input 
+            formControlName="password"
+            id="password" 
+            type="text" 
+            class="form-control">
+    </div>
+</div>
+    <button class="btn btn-primary" type="submit">
+        Sign Up
+       </button>
+
+</form>
+
+
+
+        <!-- ******** FORM ARRAYS ******************************** -->
+
+<!-- <form>
+    <input 
+        #topic 
+        type="text" 
+        class="form-control" 
+        (keyup.enter)="addTopic(topic)" />
+
+    <ul class="list-group">
+        <li 
+            *ngFor="let topic of topics.controls"
+            (click)="removeTopic(topic)"
+            class="list-group-item">
+            {{topic.value}} 
+        </li>
+    </ul>
+</form> -->
+
+
+<!-- FORM BULDER -->
+
+<!-- <form [formGroup]="form">
+    <input formControlName="name"/>
+    <div formGroupName="contact">
+        <input formControlName="email" /><br>
+        <input formControlName="phone" />
+    </div>
+    <ul>
+        <li *ngFor="let t of form.topics.controls">
+            {{t.value}}
+        </li>
+    </ul>
+</form> -->
+
+
+

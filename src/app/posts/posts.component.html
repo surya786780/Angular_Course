@@ -1,0 +1,19 @@
+
+<input #postVal type="text" (keyup.enter)="getPost(postVal,posts.length)">
+<ul>
+
+    <li *ngFor="let info of posts">
+        <!-- <button 
+            (click)="updatePost(info)"
+            class="btn btn-primary btn-sm">
+            Update
+        </button> -->
+        <button 
+            (click)="deletePost(info)"
+            class="btn btn-primary btn-sm">
+            Delete
+        </button>
+        {{info.title}}
+    </li>
+</ul>
+

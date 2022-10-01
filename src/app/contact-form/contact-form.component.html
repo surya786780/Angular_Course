@@ -1,0 +1,123 @@
+<!--        @@@@@@@@@@@ TEMPLATE DRIVEN FORMS @@@@@@@@@@@@@     -->
+
+
+<!-- <form #f="ngForm" (ngSubmit)="submit(f)"> -->
+
+    <!-- Input field -->
+    <!-- <div ngModelGroup="contact" #contact="ngModelGroup">
+        <div *ngIf="!contact.valid">Error</div>
+        <div class="form-group mx-5"> -->
+            <!-- ZEN CODE -> label+input[type='text'].form-control -->
+            <!-- <label for="firstName">
+                First Name
+            </label>
+            <input 
+                minlength='2' 
+                maxlength='20'
+                pattern="sk"  
+                required 
+                ngModel 
+                name="firstName" 
+                #frtName="ngModel" 
+                (change)="log(frtName)" 
+                id="firstName" 
+                type="text" 
+                class="form-control" />
+    
+            <div 
+                class="alert alert-danger" 
+                *ngIf="!frtName.valid && frtName.touched" >
+    
+                <div *ngIf="frtName.errors?.['required']">
+                    firstName is required.
+                </div>
+                <div *ngIf="frtName.errors?.['minlength']">
+                    firstName is required minimum 
+                    {{frtName.errors?.['minlength'].requiredLength}} 
+                    length.
+                </div>
+                <div *ngIf="frtName.errors?.['pattern']">
+                    firstName not match pattern 
+                    {{frtName.errors?.['pattern'].requiredPattern}}
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- made the styles in Styles.css file -->
+
+    <!-- TextArea -->
+    <!-- <div class="form-group mx-5"> -->
+        <!-- .form-group>label[for='comment']+textarea[id='comment'] -->
+        <!-- <label for="comment">Comment</label>
+        <textarea 
+            ngModel 
+            name="comment" 
+            id="comment" 
+            cols="30" 
+            rows="5" 
+            class="form-control">
+        </textarea> 
+    </div> -->
+
+    <!-- Checkbox -->
+    <!-- <div class="checkbox">
+        <label>
+            <input required type="checkbox" ngModel name="isSubscribe"> 
+            Accept all the details is true
+        </label>
+    </div> -->
+
+    <!-- Drop-down List -->
+    <!-- <div class="form-group">
+        <label for="contactMethod">
+            Contact Method
+        </label>
+        <select multiple
+            ngModel
+            name="contactMethod" 
+            id="contactMethod" 
+             class="form-control">
+                <option *ngFor ="let method of cnctMethods" 
+                [value]="method.id">
+                    {{method.name}}
+                </option> -->
+                <!-- <option value="email">email</option>
+                <option value="phone">phone</option> -->
+        <!-- </select>
+    </div> -->
+    
+    <!-- RADIO BUTTON -->
+    <!-- <div *ngFor="let method of cnctMethods" class="radio">
+        <label for="">
+            <input ngModel  type="radio" name="contactMethod" [value]='method.id'>
+            {{method.name }}
+        </label>
+    </div> -->
+
+    <!-- <div class="radio">
+        <label for="">
+            <input ngModel type="radio" name="contactMethod" value='2'>
+            Phone
+        </label>
+    </div> -->
+
+
+    <!-- <br><br> -->
+    <!-- See all the values using the form value -->
+    <!-- <p> {{f.value | json }}</p>
+
+    <button  class="btn btn-primary mx-5 my-2" [disabled]="!f.valid">
+        Submit
+    </button>
+
+</form > -->
+
+
+          <!--       @@@@@@@@@@@@@@@ REACTIVE FORMS @@@@@@@@@@@@@       -->
+
+
+
+
+
+
+
